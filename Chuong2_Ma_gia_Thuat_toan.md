@@ -16,13 +16,13 @@ Tài liệu này được xây dựng bám theo Chương 2 của giáo trình, g
 ## 1. Thuật toán kiểm tra đoạn ly nghiệm
 
 ### Cơ sở
-Với hàm \(f\) có đạo hàm liên tục trên \([a,b]\), nếu
+Với hàm $f$ có đạo hàm liên tục trên $[a,b]$, nếu
 
 $$
 f(a)f(b)<0
 $$
 
-và \(f'(x)\) không đổi dấu trên \([a,b]\), thì \([a,b]\) là một đoạn ly nghiệm.
+và $f'(x)$ không đổi dấu trên $[a,b]$, thì $[a,b]$ là một đoạn ly nghiệm.
 
 ### Mã giả
 
@@ -63,9 +63,9 @@ Bước 5:
 ## 2. Phương pháp chia đôi
 
 ### Cơ sở
-Cho \([a,b]\) là đoạn ly nghiệm và \(f(a)f(b)<0\).
+Cho $[a,b]$ là đoạn ly nghiệm và $f(a)f(b)<0$.
 
-Ở bước thứ \(n\),
+Ở bước thứ $n$,
 
 $$
 x_n=\frac{a_n+b_n}{2}.
@@ -138,13 +138,13 @@ Với n = 0,1,...,N:
 ## 3. Phương pháp lặp đơn
 
 ### Cơ sở
-Biến đổi phương trình \(f(x)=0\) về dạng
+Biến đổi phương trình $f(x)=0$ về dạng
 
 $$
 x=\varphi(x).
 $$
 
-Nếu \(\varphi([a,b])\subset[a,b]\) và
+Nếu $\varphi([a,b])\subset[a,b]$ và
 
 $$
 |\varphi'(x)|\le L<1,
@@ -208,7 +208,7 @@ $$
 \frac{L^n}{1-L}|x_1-x_0|.
 $$
 
-Muốn \(\Delta_{x_n}\le\varepsilon\), chọn
+Muốn $\Delta_{x_n}\le\varepsilon$, chọn
 
 $$
 n\ge
@@ -243,7 +243,7 @@ Bước 4:
 
 ## 5. Xây dựng hàm lặp theo quy tắc tổng quát
 
-Giả sử \(f'(x)\) liên tục và không đổi dấu trên đoạn ly nghiệm \([a,b]\). Đặt
+Giả sử $f'(x)$ liên tục và không đổi dấu trên đoạn ly nghiệm $[a,b]$. Đặt
 
 $$
 m=\min_{a\le x\le b}|f'(x)|,
@@ -251,7 +251,7 @@ m=\min_{a\le x\le b}|f'(x)|,
 M=\max_{a\le x\le b}|f'(x)|.
 $$
 
-### Trường hợp 1: \(f'(x)>0\)
+### Trường hợp 1: $f'(x)>0$
 
 Chọn
 
@@ -265,7 +265,7 @@ $$
 L=1-\frac{m}{M}.
 $$
 
-### Trường hợp 2: \(f'(x)<0\)
+### Trường hợp 2: $f'(x)<0$
 
 Chọn
 
@@ -316,7 +316,7 @@ $$
 x_n=x_{n-1}-\frac{f(x_{n-1})}{f'(x_{n-1})}.
 $$
 
-Theo điều kiện của chương, chọn \(x_0\in\{a,b\}\) sao cho
+Theo điều kiện của chương, chọn $x_0\in\{a,b\}$ sao cho
 
 $$
 f(x_0)f''(x_0)>0.

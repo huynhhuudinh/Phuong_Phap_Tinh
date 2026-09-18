@@ -100,7 +100,7 @@ Trả về L(x)
 
 # 3. Đánh giá sai số nội suy Lagrange
 
-Nếu \(f\) khả vi liên tục đến cấp \(n+1\) trên \([a,b]\), thì tại điểm \(\bar x\)
+Nếu $f$ khả vi liên tục đến cấp $n+1$ trên $[a,b]$, thì tại điểm $\bar x$
 
 $$
 |f(\bar x)-L_n(\bar x)|
@@ -163,7 +163,7 @@ L_n(x)=P_n(t)
 \sum_{i=0}^n y_i\ell_i(t).
 $$
 
-Trong tính toán, có thể dùng trực tiếp công thức Lagrange trên biến \(t\).
+Trong tính toán, có thể dùng trực tiếp công thức Lagrange trên biến $t$.
 
 ## Mã giả
 
@@ -197,7 +197,7 @@ $$
 D_i^{(0)}=y_i.
 $$
 
-Với \(k=1,2,\ldots,n\),
+Với $k=1,2,\ldots,n$,
 
 $$
 D_i^{(k)}

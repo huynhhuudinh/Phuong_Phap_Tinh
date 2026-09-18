@@ -8,7 +8,7 @@ Tài liệu này được xây dựng theo nội dung Chương 3 của giáo tr�
 1. Kiểm tra ma trận đường chéo trội nghiêm ngặt theo dòng.
 2. Phương pháp khử Gauss.
 3. Thế tiến và thế ngược.
-4. Phân tích \(LU\).
+4. Phân tích $LU$.
 5. Tính các chuẩn vector và chuẩn ma trận thường dùng.
 6. Phương pháp lặp đơn (Jacobi).
 7. Phương pháp Gauss--Seidel.
@@ -19,7 +19,7 @@ Tài liệu này được xây dựng theo nội dung Chương 3 của giáo tr�
 
 # 1. Kiểm tra tính đường chéo trội nghiêm ngặt theo dòng
 
-Ma trận \(\mathbf A=(a_{ij})\) được gọi là đường chéo trội nghiêm ngặt theo dòng nếu
+Ma trận $\mathbf A=(a_{ij})$ được gọi là đường chéo trội nghiêm ngặt theo dòng nếu
 
 $$
 |a_{ii}| >
@@ -156,7 +156,7 @@ $$
 \mathbf A=\mathbf L\mathbf U.
 $$
 
-Trong ví dụ, \(\mathbf U\) được chọn có các phần tử đường chéo chính bằng \(1\), tương ứng với dạng Crout.
+Trong ví dụ, $\mathbf U$ được chọn có các phần tử đường chéo chính bằng $1$, tương ứng với dạng Crout.
 
 ## Mã giả phân tích Crout
 
@@ -188,7 +188,7 @@ Với j = 1,2,...,n:
 Trả về L, U
 ```
 
-Sau khi có \(\mathbf A=\mathbf L\mathbf U\):
+Sau khi có $\mathbf A=\mathbf L\mathbf U$:
 
 ```text
 y = THẾ_TIẾN(L, b)
@@ -236,7 +236,7 @@ Trả về norm1, norm_inf, norm2
 
 # 7. Chuẩn ma trận liên kết
 
-Với \(\mathbf A=(a_{ij})\),
+Với $\mathbf A=(a_{ij})$,
 
 $$
 \|\mathbf A\|_1
@@ -287,7 +287,7 @@ $$
 \mathbf A\mathbf x=\mathbf b,
 $$
 
-với \(a_{ii}\ne0\), xây dựng
+với $a_{ii}\ne0$, xây dựng
 
 $$
 \mathbf x=\mathbf H\mathbf x+\mathbf g,
@@ -366,7 +366,7 @@ $$
 \mathbf x=\mathbf H\mathbf x+\mathbf g,
 $$
 
-thành phần thứ \(i\) tại bước \(k\) được cập nhật bởi
+thành phần thứ $i$ tại bước $k$ được cập nhật bởi
 
 $$
 x_i^{(k)}
@@ -467,7 +467,7 @@ $$
 \mathbf x_k=\mathbf B\mathbf x_{k-1}+\mathbf c
 $$
 
-hội tụ với mọi \(\mathbf x_0\) khi và chỉ khi
+hội tụ với mọi $\mathbf x_0$ khi và chỉ khi
 
 $$
 \rho(\mathbf B)<1.
@@ -494,7 +494,7 @@ Trả về rho
 
 # 11. Gradient Descent với bước lặp tối ưu
 
-Áp dụng khi \(\mathbf A\) đối xứng xác định dương.
+Áp dụng khi $\mathbf A$ đối xứng xác định dương.
 
 Hàm mục tiêu:
 

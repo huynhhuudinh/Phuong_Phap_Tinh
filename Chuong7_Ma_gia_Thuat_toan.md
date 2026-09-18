@@ -28,7 +28,7 @@ y(a)=y_0.
 \end{aligned}
 $$
 
-Chia đoạn \([a,b]\) thành \(n\) đoạn bằng nhau:
+Chia đoạn $[a,b]$ thành $n$ đoạn bằng nhau:
 
 $$
 h=\frac{b-a}{n},
@@ -284,7 +284,7 @@ $$
 \mathbf f(x;\mathbf Y).
 $$
 
-Với \(\mathbf Y_i\approx\mathbf Y(x_i)\),
+Với $\mathbf Y_i\approx\mathbf Y(x_i)$,
 
 $$
 \mathbf k_1
@@ -451,7 +451,7 @@ $$
 \mathcal R_0\le1,
 $$
 
-chương mô tả \(I(t)\) tiến dần về \(0\).
+chương mô tả $I(t)$ tiến dần về $0$.
 
 Nếu
 
@@ -473,7 +473,7 @@ $$
 
 # 7. Tính sai số khi biết nghiệm chính xác
 
-Nếu biết nghiệm đúng \(y(x)\), tại mốc \(x_i\),
+Nếu biết nghiệm đúng $y(x)$, tại mốc $x_i$,
 
 $$
 \Delta_{y_i}

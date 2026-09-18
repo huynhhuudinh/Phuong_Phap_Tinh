@@ -5,22 +5,22 @@
 
 Tài liệu này được xây dựng theo nội dung Chương 5 của giáo trình. Các thuật toán chính gồm:
 
-1. Xấp xỉ đường thẳng \(y=ax+b\).
-2. Tính hệ số xác định \(R^2\).
-3. Xấp xỉ tổ hợp tuyến tính của hai hàm cơ sở \(y=ag(x)+bh(x)\).
-4. Xấp xỉ đa thức bậc không quá \(m\).
-5. Xấp xỉ hàm mũ \(y=ae^{bx}\) sau phép biến đổi logarit.
-6. Xấp xỉ hàm lũy thừa \(y=ax^b\) sau phép biến đổi logarit.
+1. Xấp xỉ đường thẳng $y=ax+b$.
+2. Tính hệ số xác định $R^2$.
+3. Xấp xỉ tổ hợp tuyến tính của hai hàm cơ sở $y=ag(x)+bh(x)$.
+4. Xấp xỉ đa thức bậc không quá $m$.
+5. Xấp xỉ hàm mũ $y=ae^{bx}$ sau phép biến đổi logarit.
+6. Xấp xỉ hàm lũy thừa $y=ax^b$ sau phép biến đổi logarit.
 
 ---
 
-# 1. Xấp xỉ đường thẳng \(y=ax+b\)
+# 1. Xấp xỉ đường thẳng $y=ax+b$
 
 Với dữ liệu
 $$
 (x_i,y_i),\qquad i=1,2,\ldots,n,
 $$
-ta tìm \(a,b\) sao cho
+ta tìm $a,b$ sao cho
 $$
 S(a,b)=\sum_{i=1}^n(ax_i+b-y_i)^2
 $$
@@ -86,7 +86,7 @@ Trả về a, b
 
 ---
 
-# 2. Hệ số xác định \(R^2\)
+# 2. Hệ số xác định $R^2$
 
 Với các giá trị dự đoán
 $$
@@ -204,7 +204,7 @@ Trả về a, b
 
 ---
 
-# 4. Xấp xỉ đa thức bậc không quá \(m\)
+# 4. Xấp xỉ đa thức bậc không quá $m$
 
 Xét mô hình
 $$
@@ -269,7 +269,7 @@ Trả về:
 
 ---
 
-# 5. Xấp xỉ hàm mũ \(y=ae^{bx}\)
+# 5. Xấp xỉ hàm mũ $y=ae^{bx}$
 
 Giả sử
 $$
@@ -320,11 +320,11 @@ a = exp(B)
 Trả về a, b
 ```
 
-**Lưu ý:** Đây là bình phương bé nhất trên dữ liệu đã biến đổi logarit, không phải cực tiểu hóa trực tiếp tổng bình phương sai số trên thang \(y\) ban đầu.
+**Lưu ý:** Đây là bình phương bé nhất trên dữ liệu đã biến đổi logarit, không phải cực tiểu hóa trực tiếp tổng bình phương sai số trên thang $y$ ban đầu.
 
 ---
 
-# 6. Xấp xỉ hàm lũy thừa \(y=ax^b\)
+# 6. Xấp xỉ hàm lũy thừa $y=ax^b$
 
 Giả sử
 $$

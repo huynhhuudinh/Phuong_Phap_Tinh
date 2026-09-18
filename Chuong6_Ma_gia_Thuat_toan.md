@@ -18,8 +18,8 @@ Các thuật toán chính gồm:
 9. Công thức Simpson một phần ba.
 10. Công thức Simpson một phần ba mở rộng.
 11. Phương pháp tích phân Romberg.
-12. Công thức cầu phương Gauss--Legendre trên \([-1,1]\).
-13. Công thức cầu phương Gauss--Legendre trên đoạn \([a,b]\).
+12. Công thức cầu phương Gauss--Legendre trên $[-1,1]$.
+13. Công thức cầu phương Gauss--Legendre trên đoạn $[a,b]$.
 
 ---
 
@@ -34,7 +34,7 @@ f'(x_0)
 \qquad h>0.
 $$
 
-Nếu \(f''\) liên tục trên đoạn nối \(x_0\) và \(x_0+h\), thì
+Nếu $f''$ liên tục trên đoạn nối $x_0$ và $x_0+h$, thì
 
 $$
 \Delta_D
@@ -100,7 +100,7 @@ f'(x^*)
 \frac{-3f(x^*)+4f(x^*+h)-f(x^*+2h)}{2h}.
 $$
 
-Giá trị \(h\) có thể dương hoặc âm nếu các mốc tương ứng tồn tại.
+Giá trị $h$ có thể dương hoặc âm nếu các mốc tương ứng tồn tại.
 
 ## Mã giả
 
@@ -209,7 +209,7 @@ Trả về D
 
 # 7. Công thức Newton--Cotes đóng
 
-Chia đoạn \([a,b]\) thành \(n\) đoạn bằng nhau:
+Chia đoạn $[a,b]$ thành $n$ đoạn bằng nhau:
 
 $$
 x_i=a+ih,
@@ -227,7 +227,7 @@ I_{\rm NC}
 h\sum_{i=0}^n H_{n,i}f(x_i).
 $$
 
-Các hệ số \(H_{n,i}\) là hệ số Cotes.
+Các hệ số $H_{n,i}$ là hệ số Cotes.
 
 ## Mã giả
 
@@ -248,7 +248,7 @@ Trả về I
 
 ### Cách tính hệ số Cotes bằng hệ moment
 
-Ta có thể xác định \(H_i\) từ các điều kiện
+Ta có thể xác định $H_i$ từ các điều kiện
 
 $$
 \sum_{i=0}^n H_i i^k
@@ -315,7 +315,7 @@ Trả về I
 
 # 9. Công thức hình thang mở rộng
 
-Chia \([a,b]\) thành \(n\) đoạn bằng nhau:
+Chia $[a,b]$ thành $n$ đoạn bằng nhau:
 
 $$
 h=\frac{b-a}{n}.
@@ -411,7 +411,7 @@ Trả về I
 
 # 11. Công thức Simpson một phần ba mở rộng
 
-Yêu cầu số đoạn chia \(n\) phải chẵn.
+Yêu cầu số đoạn chia $n$ phải chẵn.
 
 $$
 h=\frac{b-a}{n}.
@@ -523,7 +523,7 @@ Trả về bảng R và R[m,m]
 
 ---
 
-# 13. Cầu phương Gauss--Legendre trên \([-1,1]\)
+# 13. Cầu phương Gauss--Legendre trên $[-1,1]$
 
 Công thức:
 
@@ -535,7 +535,7 @@ I
 \sum_{i=1}^n B_if(x_i),
 $$
 
-trong đó \(x_i\) là các nghiệm của đa thức Legendre \(P_n\), còn \(B_i\) là các trọng số Gauss.
+trong đó $x_i$ là các nghiệm của đa thức Legendre $P_n$, còn $B_i$ là các trọng số Gauss.
 
 ## Mã giả
 
@@ -552,7 +552,7 @@ Trả về I
 
 ---
 
-# 14. Cầu phương Gauss--Legendre trên \([a,b]\)
+# 14. Cầu phương Gauss--Legendre trên $[a,b]$
 
 Đổi biến
 
@@ -598,7 +598,7 @@ Trả về I
 
 # 15. Đánh giá sai số Gauss--Legendre
 
-Với công thức Gauss \(n\)-điểm trên \([-1,1]\),
+Với công thức Gauss $n$-điểm trên $[-1,1]$,
 
 $$
 \Delta_{\rm G}
