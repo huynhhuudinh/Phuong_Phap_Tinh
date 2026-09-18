@@ -1,6 +1,8 @@
 # CHƯƠNG 7 — PHƯƠNG TRÌNH VI PHÂN
 ## Mã giả các thuật toán
 
+> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `\[ ... \]`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
+
 Tài liệu này được xây dựng theo nội dung Chương 7 của giáo trình.
 
 Các thuật toán chính gồm:
@@ -239,13 +241,13 @@ y_N=y^{(N-1)}.
 Khi đó,
 
 \[
-\begin{cases}
-y_1'=y_2,\\
-y_2'=y_3,\\
-\vdots\\
-y_{N-1}'=y_N,\\
-y_N'=f(x;y_1,\ldots,y_N).
-\end{cases}
+\begin{aligned}
+y_1' &= y_2, \\
+ y_2' &= y_3, \\
+ &\vdots \\
+ y_{N-1}' &= y_N, \\
+ y_N' &= f(x;y_1,\ldots,y_N).
+\end{aligned}
 \]
 
 ## Mã giả
@@ -390,14 +392,10 @@ Trả về bảng kết quả
 Mô hình:
 
 \[
-\begin{cases}
-S'
-=
--\dfrac{\beta}{N}SI+\gamma I,\\
-I'
-=
-\dfrac{\beta}{N}SI-\gamma I,
-\end{cases}
+\begin{aligned}
+S' &= -\frac{\beta}{N}SI + \gamma I, \\
+I' &= \frac{\beta}{N}SI - \gamma I.
+\end{aligned}
 \]
 
 trong đó

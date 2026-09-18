@@ -1,6 +1,8 @@
 # CHƯƠNG 2 — PHƯƠNG TRÌNH PHI TUYẾN MỘT BIẾN SỐ
 ## Mã giả các thuật toán
 
+> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `\[ ... \]`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
+
 Tài liệu này được xây dựng bám theo Chương 2 của giáo trình, gồm các nội dung thuật toán:
 1. Kiểm tra đoạn ly nghiệm.
 2. Phương pháp chia đôi.

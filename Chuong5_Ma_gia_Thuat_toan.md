@@ -1,6 +1,8 @@
 # CHƯƠNG 5 — PHƯƠNG PHÁP BÌNH PHƯƠNG BÉ NHẤT
 ## Mã giả các thuật toán
 
+> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `\[ ... \]`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
+
 Tài liệu này được xây dựng theo nội dung Chương 5 của giáo trình. Các thuật toán chính gồm:
 
 1. Xấp xỉ đường thẳng \(y=ax+b\).
@@ -26,10 +28,10 @@ nhỏ nhất.
 
 Hệ phương trình chuẩn là
 \[
-\begin{cases}
-\left(\sum x_i^2\right)a+\left(\sum x_i\right)b=\sum x_i y_i,\\
-\left(\sum x_i\right)a+nb=\sum y_i.
-\end{cases}
+\begin{aligned}
+\left(\sum x_i^2\right)a + \left(\sum x_i\right)b &= \sum x_i y_i, \\
+\left(\sum x_i\right)a + nb &= \sum y_i.
+\end{aligned}
 \]
 
 Đặt
