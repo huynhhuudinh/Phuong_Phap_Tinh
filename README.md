@@ -41,12 +41,12 @@ Repository này bao gồm các chủ đề quan trọng của Phương Pháp Tí
 Các file Markdown trong repository được viết theo dạng MathJax-friendly để có thể hiển thị tốt trên GitHub, ví dụ:
 
 ```markdown
-\[
+$$
 \begin{aligned}
 S' &= -\frac{\beta}{N}SI + \gamma I, \\
 I' &= \frac{\beta}{N}SI - \gamma I.
 \end{aligned}
-\]
+$$
 ```
 
 Điều này giúp công thức toán hiển thị rõ ràng hơn so với các dạng lồng ghép hoặc cú pháp không đồng nhất.

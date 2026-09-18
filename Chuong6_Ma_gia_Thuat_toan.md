@@ -1,7 +1,7 @@
 # CHƯƠNG 6 — TÍNH GẦN ĐÚNG ĐẠO HÀM VÀ TÍCH PHÂN
 ## Mã giả các thuật toán
 
-> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `\[ ... \]`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
+> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `$$ ... $$`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
 
 Tài liệu này được xây dựng theo nội dung Chương 6 của giáo trình.
 
@@ -27,27 +27,27 @@ Các thuật toán chính gồm:
 
 Công thức:
 
-\[
+$$
 f'(x_0)
 \approx
 \frac{f(x_0+h)-f(x_0)}{h},
 \qquad h>0.
-\]
+$$
 
 Nếu \(f''\) liên tục trên đoạn nối \(x_0\) và \(x_0+h\), thì
 
-\[
+$$
 \Delta_D
 \le
 \frac{M|h|}{2},
-\]
+$$
 
 trong đó
 
-\[
+$$
 M=
 \max |f''(x)|.
-\]
+$$
 
 ## Mã giả
 
@@ -68,12 +68,12 @@ Trả về D
 
 Công thức có thể viết dưới dạng
 
-\[
+$$
 f'(x_0)
 \approx
 \frac{f(x_0)-f(x_0-h)}{h},
 \qquad h>0.
-\]
+$$
 
 ## Mã giả
 
@@ -94,11 +94,11 @@ Trả về D
 
 Theo ký hiệu của chương:
 
-\[
+$$
 f'(x^*)
 \approx
 \frac{-3f(x^*)+4f(x^*+h)-f(x^*+2h)}{2h}.
-\]
+$$
 
 Giá trị \(h\) có thể dương hoặc âm nếu các mốc tương ứng tồn tại.
 
@@ -121,11 +121,11 @@ Trả về D
 
 # 4. Công thức 3-điểm giữa
 
-\[
+$$
 f'(x^*)
 \approx
 \frac{-f(x^*-h)+f(x^*+h)}{2h}.
-\]
+$$
 
 ## Mã giả
 
@@ -144,7 +144,7 @@ Trả về D
 
 # 5. Công thức 5-điểm cuối
 
-\[
+$$
 f'(x^*)
 \approx
 \frac{
@@ -156,7 +156,7 @@ f'(x^*)
 }{
 12h
 }.
-\]
+$$
 
 ## Mã giả
 
@@ -179,7 +179,7 @@ Trả về D
 
 # 6. Công thức 5-điểm giữa
 
-\[
+$$
 f'(x^*)
 \approx
 \frac{
@@ -187,7 +187,7 @@ f(x^*-2h)-8f(x^*-h)+8f(x^*+h)-f(x^*+2h)
 }{
 12h
 }.
-\]
+$$
 
 ## Mã giả
 
@@ -211,21 +211,21 @@ Trả về D
 
 Chia đoạn \([a,b]\) thành \(n\) đoạn bằng nhau:
 
-\[
+$$
 x_i=a+ih,
 \qquad
 h=\frac{b-a}{n}.
-\]
+$$
 
 Công thức:
 
-\[
+$$
 I
 \approx
 I_{\rm NC}
 =
 h\sum_{i=0}^n H_{n,i}f(x_i).
-\]
+$$
 
 Các hệ số \(H_{n,i}\) là hệ số Cotes.
 
@@ -250,13 +250,13 @@ Trả về I
 
 Ta có thể xác định \(H_i\) từ các điều kiện
 
-\[
+$$
 \sum_{i=0}^n H_i i^k
 =
 \frac{n^{k+1}}{k+1},
 \qquad
 k=0,1,\ldots,n.
-\]
+$$
 
 ```text
 THUẬT TOÁN HỆ_SỐ_COTES(n)
@@ -279,27 +279,27 @@ Trả về H
 
 # 8. Công thức hình thang
 
-\[
+$$
 I
 =
 \int_a^b f(x)\,dx
 \approx
 \frac{b-a}{2}[f(a)+f(b)].
-\]
+$$
 
 Sai số:
 
-\[
+$$
 \Delta_{\rm HT}
 \le
 \frac{M(b-a)^3}{12},
-\]
+$$
 
 với
 
-\[
+$$
 M=\max_{a\le x\le b}|f''(x)|.
-\]
+$$
 
 ## Mã giả
 
@@ -317,13 +317,13 @@ Trả về I
 
 Chia \([a,b]\) thành \(n\) đoạn bằng nhau:
 
-\[
+$$
 h=\frac{b-a}{n}.
-\]
+$$
 
 Công thức:
 
-\[
+$$
 I_{\rm HTMR}
 =
 \frac{h}{2}
@@ -334,15 +334,15 @@ f(x_0)
 +
 f(x_n)
 \right].
-\]
+$$
 
 Sai số:
 
-\[
+$$
 \Delta_{\rm HTMR}
 \le
 \frac{(b-a)Mh^2}{12}.
-\]
+$$
 
 ## Mã giả
 
@@ -366,7 +366,7 @@ Trả về I
 
 # 10. Công thức Simpson một phần ba
 
-\[
+$$
 I
 \approx
 \frac{b-a}{6}
@@ -377,21 +377,21 @@ f(a)
 +
 f(b)
 \right].
-\]
+$$
 
 Sai số thường dùng:
 
-\[
+$$
 \Delta_{\rm S1/3}
 \le
 \frac{M(b-a)^5}{2880},
-\]
+$$
 
 với
 
-\[
+$$
 M=\max |f^{(4)}(x)|.
-\]
+$$
 
 ## Mã giả
 
@@ -413,11 +413,11 @@ Trả về I
 
 Yêu cầu số đoạn chia \(n\) phải chẵn.
 
-\[
+$$
 h=\frac{b-a}{n}.
-\]
+$$
 
-\[
+$$
 I_{\rm S1/3MR}
 =
 \frac{h}{3}
@@ -428,15 +428,15 @@ f(x_0)+f(x_n)
 +
 2\sum_{\substack{i=2\\i\ {\rm chẵn}}}^{n-2}f(x_i)
 \right].
-\]
+$$
 
 Sai số:
 
-\[
+$$
 \Delta_{\rm S1/3MR}
 \le
 \frac{(b-a)Mh^4}{180}.
-\]
+$$
 
 ## Mã giả
 
@@ -470,15 +470,15 @@ Khởi đầu bằng công thức hình thang mở rộng.
 
 Đặt
 
-\[
+$$
 R_{i,0}
 =
 I_{\rm HTMR}(2^i).
-\]
+$$
 
 Sau đó thực hiện ngoại suy Richardson:
 
-\[
+$$
 R_{i,k}
 =
 \frac{
@@ -488,7 +488,7 @@ R_{i,k}
 },
 \qquad
 k=1,\ldots,i.
-\]
+$$
 
 ## Mã giả
 
@@ -527,13 +527,13 @@ Trả về bảng R và R[m,m]
 
 Công thức:
 
-\[
+$$
 I
 =
 \int_{-1}^{1}f(x)\,dx
 \approx
 \sum_{i=1}^n B_if(x_i),
-\]
+$$
 
 trong đó \(x_i\) là các nghiệm của đa thức Legendre \(P_n\), còn \(B_i\) là các trọng số Gauss.
 
@@ -556,16 +556,16 @@ Trả về I
 
 Đổi biến
 
-\[
+$$
 x=
 \frac{b-a}{2}t
 +
 \frac{a+b}{2}.
-\]
+$$
 
 Khi đó
 
-\[
+$$
 I
 =
 \frac{b-a}{2}
@@ -573,7 +573,7 @@ I
 f\left(
 \frac{b-a}{2}t+\frac{a+b}{2}
 \right)dt.
-\]
+$$
 
 ## Mã giả
 
@@ -600,7 +600,7 @@ Trả về I
 
 Với công thức Gauss \(n\)-điểm trên \([-1,1]\),
 
-\[
+$$
 \Delta_{\rm G}
 \le
 \frac{
@@ -609,14 +609,14 @@ Với công thức Gauss \(n\)-điểm trên \([-1,1]\),
 [(2n)!]^3(2n+1)
 }
 M,
-\]
+$$
 
 trong đó
 
-\[
+$$
 M=
 \max_{-1\le x\le1}|f^{(2n)}(x)|.
-\]
+$$
 
 ```text
 THUẬT TOÁN CẬN_SAI_SỐ_GAUSS(n, M)

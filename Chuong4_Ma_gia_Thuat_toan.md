@@ -1,7 +1,7 @@
 # CHƯƠNG 4 — ĐA THỨC NỘI SUY
 ## Mã giả các thuật toán
 
-> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `\[ ... \]`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
+> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `$$ ... $$`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
 
 Tài liệu này được xây dựng theo nội dung Chương 4 của giáo trình. Các thuật toán chính gồm:
 
@@ -19,32 +19,32 @@ Tài liệu này được xây dựng theo nội dung Chương 4 của giáo tr�
 
 Cho các mốc phân biệt
 
-\[
+$$
 x_0,x_1,\ldots,x_n
-\]
+$$
 
 và các giá trị
 
-\[
+$$
 y_i=f(x_i).
-\]
+$$
 
 Đa thức nội suy Lagrange là
 
-\[
+$$
 L_n(x)
 =
 \sum_{i=0}^n y_i\omega_i(x),
-\]
+$$
 
 trong đó
 
-\[
+$$
 \omega_i(x)
 =
 \prod_{\substack{j=0\\j\ne i}}^n
 \frac{x-x_j}{x_i-x_j}.
-\]
+$$
 
 ## Mã giả
 
@@ -102,21 +102,21 @@ Trả về L(x)
 
 Nếu \(f\) khả vi liên tục đến cấp \(n+1\) trên \([a,b]\), thì tại điểm \(\bar x\)
 
-\[
+$$
 |f(\bar x)-L_n(\bar x)|
 \le
 \frac{M}{(n+1)!}
 \left|
 \prod_{i=0}^n(\bar x-x_i)
 \right|,
-\]
+$$
 
 với
 
-\[
+$$
 M=
 \max_{a\le x\le b}|f^{(n+1)}(x)|.
-\]
+$$
 
 ## Mã giả
 
@@ -141,27 +141,27 @@ Trả về Err
 
 Giả sử
 
-\[
+$$
 x_i=a+ih,
 \qquad
 h=\frac{b-a}{n}.
-\]
+$$
 
 Đặt
 
-\[
+$$
 x=a+ht
 \quad\Longrightarrow\quad
 t=\frac{x-a}{h}.
-\]
+$$
 
 Ta có
 
-\[
+$$
 L_n(x)=P_n(t)
 =
 \sum_{i=0}^n y_i\ell_i(t).
-\]
+$$
 
 Trong tính toán, có thể dùng trực tiếp công thức Lagrange trên biến \(t\).
 
@@ -193,13 +193,13 @@ Trả về P
 
 Quy ước
 
-\[
+$$
 D_i^{(0)}=y_i.
-\]
+$$
 
 Với \(k=1,2,\ldots,n\),
 
-\[
+$$
 D_i^{(k)}
 =
 \frac{
@@ -207,7 +207,7 @@ D_{i+1}^{(k-1)}-D_i^{(k-1)}
 }{
 x_{i+k}-x_i
 }.
-\]
+$$
 
 ## Mã giả
 
@@ -232,9 +232,9 @@ Trả về D
 
 Các hệ số của đa thức Newton là
 
-\[
+$$
 a_k=D_0^{(k)}.
-\]
+$$
 
 ---
 
@@ -242,7 +242,7 @@ a_k=D_0^{(k)}.
 
 Đa thức Newton:
 
-\[
+$$
 L_n(x)
 =
 a_0
@@ -250,13 +250,13 @@ a_0
 \sum_{k=1}^{n}
 a_k
 \prod_{j=0}^{k-1}(x-x_j),
-\]
+$$
 
 với
 
-\[
+$$
 a_k=f[x_0;x_1;\ldots;x_k].
-\]
+$$
 
 ## Mã giả
 
@@ -302,33 +302,33 @@ Trả về L(x)
 
 Cho
 
-\[
+$$
 x_0<x_1<\cdots<x_n,
 \qquad
 y_i=f(x_i).
-\]
+$$
 
 Đặt
 
-\[
+$$
 h_i=x_{i+1}-x_i.
-\]
+$$
 
 Với spline tự nhiên:
 
-\[
+$$
 m_0=m_n=0.
-\]
+$$
 
 Các giá trị
 
-\[
+$$
 m_i=S''(x_i)
-\]
+$$
 
 được tìm bằng hệ
 
-\[
+$$
 \frac{h_i}{6}m_i
 +
 \frac{h_i+h_{i+1}}{3}m_{i+1}
@@ -338,7 +338,7 @@ m_i=S''(x_i)
 \frac{y_{i+2}-y_{i+1}}{h_{i+1}}
 -
 \frac{y_{i+1}-y_i}{h_i}.
-\]
+$$
 
 ## Mã giả
 

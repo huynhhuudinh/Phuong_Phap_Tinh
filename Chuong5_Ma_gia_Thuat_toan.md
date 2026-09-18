@@ -1,7 +1,7 @@
 # CHƯƠNG 5 — PHƯƠNG PHÁP BÌNH PHƯƠNG BÉ NHẤT
 ## Mã giả các thuật toán
 
-> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `\[ ... \]`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
+> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `$$ ... $$`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
 
 Tài liệu này được xây dựng theo nội dung Chương 5 của giáo trình. Các thuật toán chính gồm:
 
@@ -17,41 +17,41 @@ Tài liệu này được xây dựng theo nội dung Chương 5 của giáo tr�
 # 1. Xấp xỉ đường thẳng \(y=ax+b\)
 
 Với dữ liệu
-\[
+$$
 (x_i,y_i),\qquad i=1,2,\ldots,n,
-\]
+$$
 ta tìm \(a,b\) sao cho
-\[
+$$
 S(a,b)=\sum_{i=1}^n(ax_i+b-y_i)^2
-\]
+$$
 nhỏ nhất.
 
 Hệ phương trình chuẩn là
-\[
+$$
 \begin{aligned}
 \left(\sum x_i^2\right)a + \left(\sum x_i\right)b &= \sum x_i y_i, \\
 \left(\sum x_i\right)a + nb &= \sum y_i.
 \end{aligned}
-\]
+$$
 
 Đặt
-\[
+$$
 S_1=\sum x_i,\quad
 S_2=\sum x_i^2,\quad
 S_3=\sum y_i,\quad
 S_4=\sum x_i y_i.
-\]
+$$
 
 Khi
-\[
+$$
 D=nS_2-S_1^2\ne0,
-\]
+$$
 ta có
-\[
+$$
 a=\frac{nS_4-S_1S_3}{D},
 \qquad
 b=\frac{S_2S_3-S_1S_4}{D}.
-\]
+$$
 
 ### Mã giả
 
@@ -89,21 +89,21 @@ Trả về a, b
 # 2. Hệ số xác định \(R^2\)
 
 Với các giá trị dự đoán
-\[
+$$
 \widehat y_i=f(x_i)
-\]
+$$
 và
-\[
+$$
 \overline y=\frac1n\sum_{i=1}^n y_i,
-\]
+$$
 hệ số xác định được tính bởi
-\[
+$$
 R^2
 =
 1-
 \frac{\sum_{i=1}^n(y_i-\widehat y_i)^2}
 {\sum_{i=1}^n(y_i-\overline y)^2}.
-\]
+$$
 
 ### Mã giả
 
@@ -136,38 +136,38 @@ Trả về R2
 # 3. Xấp xỉ bằng hai hàm cơ sở
 
 Xét mô hình
-\[
+$$
 y=ag(x)+bh(x).
-\]
+$$
 
 Tổng bình phương sai số là
-\[
+$$
 S(a,b)
 =
 \sum_{i=1}^n
 \left[
 ag(x_i)+bh(x_i)-y_i
 \right]^2.
-\]
+$$
 
 Đặt
-\[
+$$
 A_{11}=\sum g^2(x_i),\quad
 A_{12}=\sum g(x_i)h(x_i),\quad
 A_{22}=\sum h^2(x_i),
-\]
-\[
+$$
+$$
 B_1=\sum g(x_i)y_i,\qquad
 B_2=\sum h(x_i)y_i.
-\]
+$$
 
 Hệ phương trình chuẩn là
-\[
-\begin{cases}
+$$
+\begin{aligned}
 A_{11}a+A_{12}b=B_1,\\
 A_{12}a+A_{22}b=B_2.
-\end{cases}
-\]
+\end{aligned}
+$$
 
 ### Mã giả
 
@@ -207,31 +207,31 @@ Trả về a, b
 # 4. Xấp xỉ đa thức bậc không quá \(m\)
 
 Xét mô hình
-\[
+$$
 y=a_0+a_1x+\cdots+a_mx^m.
-\]
+$$
 
 Ta đặt
-\[
+$$
 S_k=\sum_{i=1}^n x_i^k,\qquad k=0,1,\ldots,2m,
-\]
+$$
 và
-\[
+$$
 T_k=\sum_{i=1}^n x_i^k y_i,\qquad k=0,1,\ldots,m.
-\]
+$$
 
 Hệ phương trình chuẩn có dạng
-\[
+$$
 \mathbf A\mathbf a=\mathbf b,
-\]
+$$
 trong đó
-\[
+$$
 A_{jk}=S_{j+k},
 \qquad
 b_j=T_j,
 \qquad
 j,k=0,1,\ldots,m.
-\]
+$$
 
 ### Mã giả
 
@@ -272,34 +272,34 @@ Trả về:
 # 5. Xấp xỉ hàm mũ \(y=ae^{bx}\)
 
 Giả sử
-\[
+$$
 a>0,\qquad y_i>0.
-\]
+$$
 
 Lấy logarit tự nhiên:
-\[
+$$
 Y_i=\ln y_i.
-\]
+$$
 
 Đặt
-\[
+$$
 A=b,\qquad B=\ln a.
-\]
+$$
 
 Mô hình trở thành
-\[
+$$
 Y=Ax+B.
-\]
+$$
 
 Do đó, ta chỉ cần áp dụng thuật toán xấp xỉ đường thẳng cho dữ liệu
-\[
+$$
 (x_i,Y_i).
-\]
+$$
 
 Sau đó,
-\[
+$$
 b=A,\qquad a=e^B.
-\]
+$$
 
 ### Mã giả
 
@@ -327,29 +327,29 @@ Trả về a, b
 # 6. Xấp xỉ hàm lũy thừa \(y=ax^b\)
 
 Giả sử
-\[
+$$
 a>0,\qquad x_i>0,\qquad y_i>0.
-\]
+$$
 
 Đặt
-\[
+$$
 X_i=\ln x_i,\qquad
 Y_i=\ln y_i,
-\]
+$$
 và
-\[
+$$
 A=b,\qquad B=\ln a.
-\]
+$$
 
 Khi đó,
-\[
+$$
 Y=AX+B.
-\]
+$$
 
 Sau khi xấp xỉ đường thẳng trên dữ liệu logarit,
-\[
+$$
 b=A,\qquad a=e^B.
-\]
+$$
 
 ### Mã giả
 

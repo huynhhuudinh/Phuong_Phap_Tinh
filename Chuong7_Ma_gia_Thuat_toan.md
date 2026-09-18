@@ -1,7 +1,7 @@
 # CHƯƠNG 7 — PHƯƠNG TRÌNH VI PHÂN
 ## Mã giả các thuật toán
 
-> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `\[ ... \]`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
+> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `$$ ... $$`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
 
 Tài liệu này được xây dựng theo nội dung Chương 7 của giáo trình.
 
@@ -21,28 +21,28 @@ Các thuật toán chính gồm:
 
 Xét bài toán Cauchy
 
-\[
-\begin{cases}
+$$
+\begin{aligned}
 y'=f(x;y),\\
 y(a)=y_0.
-\end{cases}
-\]
+\end{aligned}
+$$
 
 Chia đoạn \([a,b]\) thành \(n\) đoạn bằng nhau:
 
-\[
+$$
 h=\frac{b-a}{n},
 \qquad
 x_i=a+ih.
-\]
+$$
 
 Công thức Euler:
 
-\[
+$$
 y_{i+1}
 =
 y_i+h f(x_i;y_i).
-\]
+$$
 
 ## Mã giả
 
@@ -70,15 +70,15 @@ Trả về toàn bộ các cặp (x_i,y_i)
 
 Tại mỗi bước, trước tiên tính giá trị dự báo
 
-\[
+$$
 \widetilde y_{i+1}
 =
 y_i+h f(x_i;y_i),
-\]
+$$
 
 sau đó hiệu chỉnh
 
-\[
+$$
 y_{i+1}
 =
 y_i
@@ -89,7 +89,7 @@ f(x_i;y_i)
 +
 f(x_{i+1};\widetilde y_{i+1})
 \right].
-\]
+$$
 
 ## Mã giả
 
@@ -131,46 +131,46 @@ Trả về bảng kết quả
 
 Với mỗi bước,
 
-\[
+$$
 k_1
 =
 h f(x_i;y_i),
-\]
+$$
 
-\[
+$$
 k_2
 =
 h f\left(
 x_i+\frac h2;
 y_i+\frac{k_1}{2}
 \right),
-\]
+$$
 
-\[
+$$
 k_3
 =
 h f\left(
 x_i+\frac h2;
 y_i+\frac{k_2}{2}
 \right),
-\]
+$$
 
-\[
+$$
 k_4
 =
 h f(x_i+h;y_i+k_3).
-\]
+$$
 
 Cập nhật
 
-\[
+$$
 y_{i+1}
 =
 y_i
 +
 \frac16
 (k_1+2k_2+2k_3+k_4).
-\]
+$$
 
 ## Mã giả
 
@@ -223,24 +223,24 @@ Trả về bảng kết quả
 
 Xét
 
-\[
+$$
 y^{(N)}
 =
 f(x;y,y',\ldots,y^{(N-1)}).
-\]
+$$
 
 Đặt
 
-\[
+$$
 y_1=y,\quad
 y_2=y',\quad
 \ldots,\quad
 y_N=y^{(N-1)}.
-\]
+$$
 
 Khi đó,
 
-\[
+$$
 \begin{aligned}
 y_1' &= y_2, \\
  y_2' &= y_3, \\
@@ -248,7 +248,7 @@ y_1' &= y_2, \\
  y_{N-1}' &= y_N, \\
  y_N' &= f(x;y_1,\ldots,y_N).
 \end{aligned}
-\]
+$$
 
 ## Mã giả
 
@@ -278,21 +278,21 @@ Trả về hệ bậc nhất tương đương
 
 Xét
 
-\[
+$$
 \mathbf Y'
 =
 \mathbf f(x;\mathbf Y).
-\]
+$$
 
 Với \(\mathbf Y_i\approx\mathbf Y(x_i)\),
 
-\[
+$$
 \mathbf k_1
 =
 h\mathbf f(x_i;\mathbf Y_i),
-\]
+$$
 
-\[
+$$
 \mathbf k_2
 =
 h\mathbf f
@@ -300,9 +300,9 @@ h\mathbf f
 x_i+\frac h2;
 \mathbf Y_i+\frac{\mathbf k_1}{2}
 \right),
-\]
+$$
 
-\[
+$$
 \mathbf k_3
 =
 h\mathbf f
@@ -310,9 +310,9 @@ h\mathbf f
 x_i+\frac h2;
 \mathbf Y_i+\frac{\mathbf k_2}{2}
 \right),
-\]
+$$
 
-\[
+$$
 \mathbf k_4
 =
 h\mathbf f
@@ -320,11 +320,11 @@ h\mathbf f
 x_i+h;
 \mathbf Y_i+\mathbf k_3
 \right).
-\]
+$$
 
 Cập nhật
 
-\[
+$$
 \mathbf Y_{i+1}
 =
 \mathbf Y_i
@@ -339,7 +339,7 @@ Cập nhật
 +
 \mathbf k_4
 \right).
-\]
+$$
 
 ## Mã giả
 
@@ -391,26 +391,26 @@ Trả về bảng kết quả
 
 Mô hình:
 
-\[
+$$
 \begin{aligned}
 S' &= -\frac{\beta}{N}SI + \gamma I, \\
 I' &= \frac{\beta}{N}SI - \gamma I.
 \end{aligned}
-\]
+$$
 
 trong đó
 
-\[
+$$
 N=S+I.
-\]
+$$
 
 Hệ số lây nhiễm cơ bản:
 
-\[
+$$
 \mathcal R_0
 =
 \frac{\beta}{\gamma}.
-\]
+$$
 
 ## Mã giả
 
@@ -447,27 +447,27 @@ Trả về bảng S_i, I_i và R0
 
 Nếu
 
-\[
+$$
 \mathcal R_0\le1,
-\]
+$$
 
 chương mô tả \(I(t)\) tiến dần về \(0\).
 
 Nếu
 
-\[
+$$
 \mathcal R_0>1,\qquad I_0>0,
-\]
+$$
 
 mức cân bằng được nêu trong chương là
 
-\[
+$$
 I_\infty
 =
 \left(
 1-\frac{\gamma}{\beta}
 \right)N.
-\]
+$$
 
 ---
 
@@ -475,11 +475,11 @@ I_\infty
 
 Nếu biết nghiệm đúng \(y(x)\), tại mốc \(x_i\),
 
-\[
+$$
 \Delta_{y_i}
 =
 |y(x_i)-y_i|.
-\]
+$$
 
 ## Mã giả
 

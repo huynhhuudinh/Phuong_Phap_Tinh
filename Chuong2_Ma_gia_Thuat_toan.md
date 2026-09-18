@@ -1,7 +1,7 @@
 # CHƯƠNG 2 — PHƯƠNG TRÌNH PHI TUYẾN MỘT BIẾN SỐ
 ## Mã giả các thuật toán
 
-> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `\[ ... \]`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
+> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `$$ ... $$`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
 
 Tài liệu này được xây dựng bám theo Chương 2 của giáo trình, gồm các nội dung thuật toán:
 1. Kiểm tra đoạn ly nghiệm.
@@ -18,9 +18,9 @@ Tài liệu này được xây dựng bám theo Chương 2 của giáo trình, g
 ### Cơ sở
 Với hàm \(f\) có đạo hàm liên tục trên \([a,b]\), nếu
 
-\[
+$$
 f(a)f(b)<0
-\]
+$$
 
 và \(f'(x)\) không đổi dấu trên \([a,b]\), thì \([a,b]\) là một đoạn ly nghiệm.
 
@@ -67,15 +67,15 @@ Cho \([a,b]\) là đoạn ly nghiệm và \(f(a)f(b)<0\).
 
 Ở bước thứ \(n\),
 
-\[
+$$
 x_n=\frac{a_n+b_n}{2}.
-\]
+$$
 
 Sai số được đánh giá bởi
 
-\[
+$$
 \Delta_{x_n}\le \frac{b-a}{2^{n+1}}.
-\]
+$$
 
 ### Mã giả
 
@@ -140,31 +140,31 @@ Với n = 0,1,...,N:
 ### Cơ sở
 Biến đổi phương trình \(f(x)=0\) về dạng
 
-\[
+$$
 x=\varphi(x).
-\]
+$$
 
 Nếu \(\varphi([a,b])\subset[a,b]\) và
 
-\[
+$$
 |\varphi'(x)|\le L<1,
-\]
+$$
 
 thì dãy
 
-\[
+$$
 x_n=\varphi(x_{n-1})
-\]
+$$
 
 hội tụ đến nghiệm duy nhất.
 
 Sai số hậu nghiệm:
 
-\[
+$$
 \Delta_{x_n}
 \le
 \frac{L}{1-L}|x_n-x_{n-1}|.
-\]
+$$
 
 ### Mã giả
 
@@ -202,15 +202,15 @@ Bước 2:
 
 Sai số tiên nghiệm:
 
-\[
+$$
 \Delta_{x_n}
 \le
 \frac{L^n}{1-L}|x_1-x_0|.
-\]
+$$
 
 Muốn \(\Delta_{x_n}\le\varepsilon\), chọn
 
-\[
+$$
 n\ge
 \left\lceil
 \frac{
@@ -219,7 +219,7 @@ n\ge
 \ln L
 }
 \right\rceil.
-\]
+$$
 
 ### Mã giả
 
@@ -245,39 +245,39 @@ Bước 4:
 
 Giả sử \(f'(x)\) liên tục và không đổi dấu trên đoạn ly nghiệm \([a,b]\). Đặt
 
-\[
+$$
 m=\min_{a\le x\le b}|f'(x)|,
 \qquad
 M=\max_{a\le x\le b}|f'(x)|.
-\]
+$$
 
 ### Trường hợp 1: \(f'(x)>0\)
 
 Chọn
 
-\[
+$$
 \varphi(x)=x-\frac{1}{M}f(x).
-\]
+$$
 
 Khi đó có thể lấy
 
-\[
+$$
 L=1-\frac{m}{M}.
-\]
+$$
 
 ### Trường hợp 2: \(f'(x)<0\)
 
 Chọn
 
-\[
+$$
 \varphi(x)=x+\frac{1}{M}f(x),
-\]
+$$
 
 và cũng có thể lấy
 
-\[
+$$
 L=1-\frac{m}{M}.
-\]
+$$
 
 ### Mã giả
 
@@ -312,31 +312,31 @@ Bước 5:
 
 ### Cơ sở
 
-\[
+$$
 x_n=x_{n-1}-\frac{f(x_{n-1})}{f'(x_{n-1})}.
-\]
+$$
 
 Theo điều kiện của chương, chọn \(x_0\in\{a,b\}\) sao cho
 
-\[
+$$
 f(x_0)f''(x_0)>0.
-\]
+$$
 
 Đặt
 
-\[
+$$
 m=\min_{a\le x\le b}|f'(x)|,
 \qquad
 M=\max_{a\le x\le b}|f''(x)|.
-\]
+$$
 
 Sai số:
 
-\[
+$$
 \Delta_{x_n}
 \le
 \frac{M}{2m}(x_n-x_{n-1})^2.
-\]
+$$
 
 ### Mã giả
 

@@ -1,7 +1,7 @@
 # CHƯƠNG 3 — HỆ PHƯƠNG TRÌNH TUYẾN TÍNH
 ## Mã giả các thuật toán
 
-> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `\[ ... \]`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
+> Lưu ý: để render tốt trên GitHub/MathJax, các công thức dài nên viết ở dạng block `$$ ... $$` hoặc `$$ ... $$`, và các hệ phương trình nên dùng `aligned`/`cases` rõ ràng.
 
 Tài liệu này được xây dựng theo nội dung Chương 3 của giáo trình. Các thuật toán chính gồm:
 
@@ -21,11 +21,11 @@ Tài liệu này được xây dựng theo nội dung Chương 3 của giáo tr�
 
 Ma trận \(\mathbf A=(a_{ij})\) được gọi là đường chéo trội nghiêm ngặt theo dòng nếu
 
-\[
+$$
 |a_{ii}| >
 \sum_{\substack{j=1\\j\ne i}}^n |a_{ij}|,
 \quad i=1,2,\ldots,n.
-\]
+$$
 
 ```text
 THUẬT TOÁN KIỂM_TRA_CHÉO_TRỘI(A)
@@ -54,9 +54,9 @@ Trả về TRUE
 
 Đưa ma trận mở rộng
 
-\[
+$$
 (\mathbf A|\mathbf b)
-\]
+$$
 
 về dạng bậc thang bằng các phép biến đổi sơ cấp trên dòng, sau đó giải hệ tam giác trên bằng thế ngược.
 
@@ -100,9 +100,9 @@ Trong lập trình thực tế nên sử dụng **pivot từng phần**: tại c
 
 Giải hệ tam giác trên
 
-\[
+$$
 \mathbf U\mathbf x=\mathbf y.
-\]
+$$
 
 ```text
 THUẬT TOÁN THẾ_NGƯỢC(U, y)
@@ -126,9 +126,9 @@ Trả về x
 
 Giải hệ tam giác dưới
 
-\[
+$$
 \mathbf L\mathbf y=\mathbf b.
-\]
+$$
 
 ```text
 THUẬT TOÁN THẾ_TIẾN(L, b)
@@ -152,9 +152,9 @@ Trả về y
 
 Chương sử dụng biểu diễn
 
-\[
+$$
 \mathbf A=\mathbf L\mathbf U.
-\]
+$$
 
 Trong ví dụ, \(\mathbf U\) được chọn có các phần tử đường chéo chính bằng \(1\), tương ứng với dạng Crout.
 
@@ -201,26 +201,26 @@ x = THẾ_NGƯỢC(U, y)
 
 Với
 
-\[
+$$
 \mathbf x=(x_1;x_2;\ldots;x_n),
-\]
+$$
 
 ta có
 
-\[
+$$
 \|\mathbf x\|_1=\sum_{i=1}^n|x_i|,
-\]
+$$
 
-\[
+$$
 \|\mathbf x\|_\infty=\max_i|x_i|,
-\]
+$$
 
 và
 
-\[
+$$
 \|\mathbf x\|_2=
 \sqrt{\sum_{i=1}^n x_i^2}.
-\]
+$$
 
 ```text
 THUẬT TOÁN CHUẨN_VECTOR(x)
@@ -238,25 +238,25 @@ Trả về norm1, norm_inf, norm2
 
 Với \(\mathbf A=(a_{ij})\),
 
-\[
+$$
 \|\mathbf A\|_1
 =
 \max_j\sum_i |a_{ij}|,
-\]
+$$
 
-\[
+$$
 \|\mathbf A\|_\infty
 =
 \max_i\sum_j |a_{ij}|,
-\]
+$$
 
 và
 
-\[
+$$
 \|\mathbf A\|_2
 =
 \sqrt{\lambda_{\max}(\mathbf A^T\mathbf A)}.
-\]
+$$
 
 ```text
 THUẬT TOÁN CHUẨN_MA_TRẬN(A)
@@ -283,43 +283,43 @@ Trả về norm1, norm_inf, norm2
 
 Từ
 
-\[
+$$
 \mathbf A\mathbf x=\mathbf b,
-\]
+$$
 
 với \(a_{ii}\ne0\), xây dựng
 
-\[
+$$
 \mathbf x=\mathbf H\mathbf x+\mathbf g,
-\]
+$$
 
 trong đó
 
-\[
+$$
 h_{ii}=0,\qquad
 h_{ij}=-\frac{a_{ij}}{a_{ii}},\quad i\ne j,
-\]
+$$
 
 và
 
-\[
+$$
 g_i=\frac{b_i}{a_{ii}}.
-\]
+$$
 
 Nếu
 
-\[
+$$
 q=\|\mathbf H\|_\infty<1,
-\]
+$$
 
 thì dãy lặp hội tụ và
 
-\[
+$$
 \Delta_{\mathbf x_k}
 \le
 \frac{q}{1-q}
 \|\mathbf x_k-\mathbf x_{k-1}\|_\infty.
-\]
+$$
 
 ## Mã giả
 
@@ -362,13 +362,13 @@ Bước 5:
 
 Từ dạng
 
-\[
+$$
 \mathbf x=\mathbf H\mathbf x+\mathbf g,
-\]
+$$
 
 thành phần thứ \(i\) tại bước \(k\) được cập nhật bởi
 
-\[
+$$
 x_i^{(k)}
 =
 \sum_{j=1}^{i-1}h_{ij}x_j^{(k)}
@@ -376,33 +376,33 @@ x_i^{(k)}
 \sum_{j=i}^{n}h_{ij}x_j^{(k-1)}
 +
 g_i.
-\]
+$$
 
 Đặt
 
-\[
+$$
 \alpha_i=\sum_{j=1}^{i-1}|h_{ij}|,
 \qquad
 \beta_i=\sum_{j=i}^{n}|h_{ij}|,
-\]
+$$
 
 và
 
-\[
+$$
 \gamma
 =
 \max_i
 \frac{\beta_i}{1-\alpha_i}.
-\]
+$$
 
 Sai số được đánh giá bởi
 
-\[
+$$
 \Delta_{\mathbf x_k}
 \le
 \frac{\gamma}{1-\gamma}
 \|\mathbf x_k-\mathbf x_{k-1}\|_\infty.
-\]
+$$
 
 ## Mã giả
 
@@ -441,37 +441,37 @@ Bước 4:
 
 Viết
 
-\[
+$$
 \mathbf A=\mathbf D+\mathbf L+\mathbf U.
-\]
+$$
 
 Ma trận lặp Jacobi:
 
-\[
+$$
 \mathbf B_J
 =
 -\mathbf D^{-1}(\mathbf L+\mathbf U).
-\]
+$$
 
 Ma trận lặp Gauss--Seidel:
 
-\[
+$$
 \mathbf B_{GS}
 =
 -(\mathbf D+\mathbf L)^{-1}\mathbf U.
-\]
+$$
 
 Phương pháp lặp tuyến tính
 
-\[
+$$
 \mathbf x_k=\mathbf B\mathbf x_{k-1}+\mathbf c
-\]
+$$
 
 hội tụ với mọi \(\mathbf x_0\) khi và chỉ khi
 
-\[
+$$
 \rho(\mathbf B)<1.
-\]
+$$
 
 ## Mã giả
 
@@ -498,44 +498,44 @@ Trả về rho
 
 Hàm mục tiêu:
 
-\[
+$$
 F(\mathbf x)
 =
 \frac12\mathbf x^T\mathbf A\mathbf x
 -
 \mathbf x^T\mathbf b.
-\]
+$$
 
 Vector phần dư:
 
-\[
+$$
 \mathbf r_k
 =
 \mathbf b-\mathbf A\mathbf x_k.
-\]
+$$
 
 Bước đi tối ưu:
 
-\[
+$$
 \gamma_k
 =
 \frac{\mathbf r_k^T\mathbf r_k}
 {\mathbf r_k^T\mathbf A\mathbf r_k}.
-\]
+$$
 
 Cập nhật:
 
-\[
+$$
 \mathbf x_{k+1}
 =
 \mathbf x_k+\gamma_k\mathbf r_k.
-\]
+$$
 
 Điều kiện dừng trong chương:
 
-\[
+$$
 \|\mathbf r_k\|_2<\varepsilon.
-\]
+$$
 
 ## Mã giả
 
